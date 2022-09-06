@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://kit.fontawesome.com/4a7bb75172.js" crossorigin="anonymous"></script>  
+  <style>
+      .shape{
+          transform: scaleY(1);
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+      }
+      .world-map{
+          background: url(img/header-banner.jpg); 
+          background-size: cover;
+          background-repeat: no-repeat; 
+          position: relative;
+      }
+      .main-img{
+          max-height: 600px;
+      }
+      .world-map .container h2 , .world-map .container h4{
+        color: #fff;
+      }
+      .form-control, .form-control:focus {
+        border: 4px solid #ffffff;
+        box-shadow: none;
+      }
+      .input {
+       margin-bottom: 15px; 
+      }
+      .form-control {
+      background-color: #dadada;
+      box-shadow: none;
+      color: #565656;
+      font-size: 1rem;
+      line-height: 1.43;
+      min-height: 3.5em;
+      padding: 1.07em .5em;
+      box-shadow: inset 0px 0px 5px 1px #5656567e;
+  }
+  .doc2{
+    outline: none !important;
+    border:none;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  .outer-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+.hvr-shadow:hover {
+    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+.hvr-shadow {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+    transition-property: box-shadow;
+}
+.card1 img {
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+    width: 70px;
+}
+.card1 h5 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    background-image: linear-gradient(to left bottom, #f79f1f, #beb82c, #84c55f, #48cb95, #12cbc4);  -webkit-background-clip: text;
+    color: transparent;
+}
+.card-body {
+    padding-top: 0px;
+}
+.card1 .card-body p {
+  font-weight: 700;
+    color: rgb(93, 93, 93);
+}
+.card-body p {
+    margin-bottom: 5px;
+}
+.c-img{
+  padding-top: 30px;
+  padding-left: 20px;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg my-nav nav-md" id="my-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html#home"><img src="img/logo.png" alt="CoVid-19 logo" width="200px" height="auto"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger" id="hamburger" onclick="cross()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+               <div id="span"></div>
+                  <li class="nav-item ">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#covid">CoVid-19</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#quiz">self test</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown">more <i class="down-icon"></i> </a>
+    
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="index.html#precaution">PRECAUTIONS</a>
+                      <a class="dropdown-item" href="index.html#spreading">SPREADING</a>
+                      <a class="dropdown-item" href="index.html#symptoms">SYMPTOMS</a>
+                      <a class="dropdown-item" href="index.html#wash">WASH HANDS</a>
+                      <a class="dropdown-item" href="index.html#doctor">DOCTORS</a>
+                      <a class="dropdown-item" href="index.html#blog">Blog</a>
+                    </ul>
+                  </li>
+                  <a href="tel:+923482955297" class="doc">Call A Doctor</a>
+                </ul>
+    
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="world-map">
+          <div class="container pt-5 pb-5">
+            <div class="row pt-5 mt-5 pb-5">
+                <div class="col-md-6  pt-5">
+                    <h2 class="pb-3">
+                        Contact US
+                    </h2>
+                    <div>
+                        <div class="icon-block pb-3">
+                            <h4 class="">
+                                Don't hesitate to contact us
+                            </h4>
+                        </div>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input" placeholder="Your Name" required="">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control input" placeholder="Phone" required="">
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control input" placeholder="Email" required="">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea class="form-control input" rows="3" placeholder="Message" style="resize:none"></textarea>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px;">
+                                    <button href="" type="submit" class="doc doc2">SEND MESSAGE</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-5" >
+                    <!-- <img src="img/svg/cleaner.svg" alt="" class="main-img"> -->
+                    <div class="pt-5" style="clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);">
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.6716756276132!2d67.19303636183739!3d24.840899275545294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3308369cd8379%3A0x5b54461eeca7acc8!2sAptech%20Computer%20Education%20Landhi%20Center!5e0!3m2!1sen!2s!4v1597173198616!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="img/shp2.png" alt="" class="shape" width="100%">
+        </section>
+
+        <section class="pt-5 pb-5">
+          <div class="container pb-5">
+            <div class="title" style="position: relative;">
+              <div class="text-outline">Details</div>
+              <div class="title-custom text-center">
+                <h1><span>OUR</span> <span>Other Details</span></h1>
+  
+              </div>
+            </div>
+            <div class="row justify-content-center text-center mt-5">
+             <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-6 col-sm-6 col-12  mb-5 outer-card">
+                  <div class="card1 hvr-shadow" style="width: 90%; margin: auto;">
+                    <div class="mb-3"><img src="img/contct svg/home-run.svg" width="80px" alt=""></div>
+                    <h5>Address</h5>
+                    <div class="card-body text-center">
+                      <p>Shop # 7, Al Noor</p>
+                      <p>Aparment 2B11 Near Jamia</p>
+                      <p>Masjid Nazimabad # 2</p>
+                      <p>Karachi</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-lg-6 col-sm-6 col-12  mb-5 outer-card">
+                  <div class="card1 hvr-shadow" style="width: 90%; margin: auto;">
+                    <div class="mb-3"><img src="img/contct svg/phone.svg" width="80px" alt=""></div>
+                    <h5>Phone Number</h5>
+                    <div class="card-body text-center">
+                      <p>+923482955297</p>
+                      <p>+923482955297</p>
+                      <p>+923482955297</p>
+                      <p>+923482955297</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-lg-6 col-sm-6 col-12  mb-5 outer-card">
+                  <div class="card1 hvr-shadow" style="width: 90%; margin: auto;">
+                    <div class="mb-3"><img src="img/contct svg/gmail.svg" width="80px" alt=""></div>
+                    <h5>Email Address</h5>
+                    <div class="card-body text-center">
+                      <p>Shop # 7, Al Noor</p>
+                      <p>Aparment 2B11 Near Jamia</p>
+                      <p>Masjid Nazimabad # 2</p>
+                      <p>Karachi</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-lg-6 col-sm-6 col-12  mb-5 outer-card">
+                  <div class="card1 hvr-shadow" style="width: 90%; margin: auto;">
+                    <div class="mb-3"><img src="img/contct svg/whatsapp.svg" width="80px" alt=""></div>
+                    <h5>WhatsApp</h5>
+                    <div class="card-body text-center">
+                      <p>Shop # 7, Al Noor</p>
+                      <p>Aparment 2B11 Near Jamia</p>
+                      <p>Masjid Nazimabad # 2</p>
+                      <p>Karachi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+  
+             <div class="col-lg-6">
+              <img src="img/contct svg/headset.svg" width="100%" alt="" class="c-img">
+             </div>
+  
+  
+  
+            </div>
+           
+          </div>
+        </section>
+    </main>
+
+
+    <footer class="pt-5">
+        <img src="img/shp2.png" alt="" class="shape" width="100%">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <a href="#"><img src="img/logo1.png" width="100%" alt="" style="max-width: 180px; margin-top: -15px;"></a>
+              <p class="text-justify" >The disease was first identified in 2019 in Wuhan, the capital of Hubei, China, and has since spread globally, resulting in the 2019–2020 coronavirus pandemic 
+              </p>
+              <a href="">Read more >></a>
+              
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6">
+              <div class="ml-md-5">
+                <h5>Navigation</h5>
+                <ul>
+                  <li><a href="index.html#home"><i class="fa fa-angle-right"></i> HoMe</a></li>
+                  <li><a href="index.html#covid"><i class="fa fa-angle-right"></i> COvid-19</a></li>
+                  <li><a href="contact.html"><i class="fa fa-angle-right"></i> contact US</a></li>
+                  <li><a href="index.html#quiz"><i class="fa fa-angle-right"></i> Self Test</a></li>
+                  <li><a href="index.html#faq"><i class="fa fa-angle-right"></i> FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <h5>Contact Us</h5>
+              <ul class="contact">
+                <li>
+                  <i class="fas fa-home"></i>
+                 <span>
+                  Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, AUS
+                 </span>
+                </li>
+                <li>
+                  <i class="fab fa-skype"></i>
+                 <span>
+                   Skype ID : <b>CoVid19.net</b>
+                 </span>
+                </li>
+                <li>
+                  <i class="far fa-envelope-open"></i> 
+                 <span>
+                   Email : <b> CoVid@outlook.com</b>
+                 </span>
+                </li>
+              </ul>
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <h5>FOLLOW US</h5>
+              <div class="social-links">
+                <a href="https://www.facebook.com/aptechlandhi" target="_blank"> <img src="img/svg/facebook1.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.instagram.com/aptechlearning_official/?hl=en" target="_blank"><img src="img/svg/wifi.svg" width="30px" class="push" alt=""></a>
+                <a href="https://twitter.com/aptechpakistan?lang=en" target="_blank"><img src="img/svg/twitter.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.youtube.com/channel/UC-1_9MriblcrShfSM_JMd5Q" target="_blank"><img src="img/svg/youtube.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/" target="_blank"><img src="img/svg/linkedin.svg" width="30px" class="push" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <div class="text-center end">
+          copyright© 2020 By: CoVid-19
+        </div>
+      </footer>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+</body>
+</html>

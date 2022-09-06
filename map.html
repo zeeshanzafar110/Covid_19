@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" type="text/css" href="js/data-tables/datatables.min.css" />
+  <script src="https://kit.fontawesome.com/4a7bb75172.js" crossorigin="anonymous"></script>
+  
+  <style>
+    .Foundation__Inner-sc-11tbro4-1 a:last-child{
+      display: none !important;
+    } 
+    .eapps-widget-toolbar{
+        display: none !important;
+    }
+    .Main__Footer-xz49ti-2 + div {
+        display: none;
+    }
+    h3.text-center{
+        color: #fff;
+        padding: 0;
+        margin: 0;
+        margin-bottom: -20px;
+    }
+    .shape{
+    transform: scaleY(1);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.world-map{
+    background: url(img/header-banner.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    position: relative;
+}
+/*data table*/
+
+
+.coronaDataTableWrapper .dataTables_filter input,
+.theme-input-style {
+  display: block;
+  width: 100%;
+  height: 56px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 0 15px;
+  background-color: transparent;
+}
+.coronaDataTableWrapper .dataTables_filter .theme-input-wrapper input,
+.theme-input-wrapper .coronaDataTableWrapper .dataTables_filter input,
+.theme-input-wrapper .theme-input-style {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+  min-width: 0;
+  border: none;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 0;
+}
+.coronaDataTableWrapper {
+  padding: 45px 20px;
+  -webkit-box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 60px rgba(0, 0, 0, 0.05);
+}
+.coronaDataTableWrapper .dataTables_filter label,
+.coronaDataTableWrapper .dataTables_length {
+  font-size: 16px;
+  font-weight: 600;
+}
+.coronaDataTableWrapper .dataTables_length select {
+  border: 1px solid #e1e5ea;
+  border-radius: 5px;
+  padding: 5px;
+}
+.coronaDataTableWrapper .dataTables_filter label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.coronaDataTableWrapper .dataTables_filter input {
+  height: 40px;
+  border-color: #e1e5ea;
+}
+.coronaDataTableWrapper .dataTables_filter,
+.coronaDataTableWrapper .dataTables_length {
+  margin-bottom: 20px;
+}
+.coronaDataTableWrapper .dataTables_paginate .paginate_button {
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.02);
+  border: none;
+  border-radius: 2px;
+}
+.coronaDataTableWrapper
+  .dataTables_paginate
+  .paginate_button:not(.disabled).current,
+.coronaDataTableWrapper
+  .dataTables_paginate
+  .paginate_button:not(.disabled):hover {
+  color: #fff !important;
+  background: var(--green) !important;
+  border: none !important;
+}
+.coronaDataTableWrapper .dataTables_paginate .paginate_button.disabled {
+  opacity: 0.5;
+}
+table.coronaDataTable {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+table.coronaDataTable thead th {
+  text-transform: uppercase;
+  padding: 20px;
+  font-weight: 900;
+}
+table.coronaDataTable tbody td,
+table.coronaDataTable tbody th,
+table.coronaDataTable thead td,
+table.coronaDataTable thead th {
+  border: 1px solid #f0f0f0;
+  padding: 15px;
+  text-align: center;
+}
+table.coronaDataTable .flag-img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+table.coronaDataTable .flag-img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg my-nav nav-md" id="my-navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html#home"><img src="img/logo.png" alt="CoVid-19 logo" width="200px" height="auto"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger" id="hamburger" onclick="cross()">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+               <div id="span"></div>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#covid">CoVid-19</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#quiz">self test</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" data-toggle="dropdown">more <i class="down-icon"></i> </a>
+    
+                    <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="index.html#precaution">PRECAUTIONS</a>
+                      <a class="dropdown-item" href="index.html#spreading">SPREADING</a>
+                      <a class="dropdown-item" href="index.html#symptoms">SYMPTOMS</a>
+                      <a class="dropdown-item" href="index.html#wash">WASH HANDS</a>
+                      <a class="dropdown-item" href="index.html#doctor">DOCTORS</a>
+                      <a class="dropdown-item" href="index.html#blog">Blog</a>
+                    </ul>
+                  </li>
+                  <a href="tel:+923482955297" class="doc">Call A Doctor</a>
+                </ul>
+    
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="world-map">
+            <div class="container pt-5 pb-5 mt-5">
+                <h3 class="text-center pt-5">Coronavirus Stats</h3>
+                <p class="text-center text-light pt-5 mb-0">Hover on your country map to see covid-19 statistics.</p>
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-66f7346b-e05d-4f57-9f38-d2b6c54feeab"></div>
+            </div>
+            <img src="img/shp2.png" alt="" class="shape" width="100%">
+        </section>
+
+
+       <!-- data table -->
+
+
+       <section id="dataTable" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table id="coronaDataTable" class="coronaDataTable">
+                            <thead>
+                                <tr>
+                                    <th>Flag</th>
+                                    <th>country name</th>
+                                    <th>total cases</th>
+                                    <th>total deaths</th>
+                                    <th>recovered</th>
+                                    <th>critical</th>
+                                </tr>
+                            </thead>
+                            <tbody> </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="pt-5">
+        <img src="img/shp2.png" alt="" class="shape" width="100%">
+        <div class="container pt-5">
+          <div class="row">
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <a href="#"><img src="img/logo1.png" width="100%" alt="" style="max-width: 180px; margin-top: -15px;"></a>
+              <p class="text-justify" >The disease was first identified in 2019 in Wuhan, the capital of Hubei, China, and has since spread globally, resulting in the 2019–2020 coronavirus pandemic 
+              </p>
+              <a href="">Read more >></a>
+              
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6">
+              <div class="ml-md-5">
+                <h5>Navigation</h5>
+                <ul>
+                  <li><a href="index.html#home"><i class="fa fa-angle-right"></i> HoMe</a></li>
+                  <li><a href="index.html#covid"><i class="fa fa-angle-right"></i> COvid-19</a></li>
+                  <li><a href="contact.html"><i class="fa fa-angle-right"></i> contact US</a></li>
+                  <li><a href="index.html#quiz"><i class="fa fa-angle-right"></i> Self Test</a></li>
+                  <li><a href="index.html#faq"><i class="fa fa-angle-right"></i> FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <h5>Contact Us</h5>
+              <ul class="contact">
+                <li>
+                  <i class="fas fa-home"></i>
+                 <span>
+                  Level 13, 2 Elizabeth St, Melbourne, Victoria 3000, AUS
+                 </span>
+                </li>
+                <li>
+                  <i class="fab fa-skype"></i>
+                 <span>
+                   Skype ID : <b>CoVid19.net</b>
+                 </span>
+                </li>
+                <li>
+                  <i class="far fa-envelope-open"></i> 
+                 <span>
+                   Email : <b> CoVid@outlook.com</b>
+                 </span>
+                </li>
+              </ul>
+            </div>
+            <div class="col lg-3 col-md-3 col-sm-6 col-12">
+              <h5>FOLLOW US</h5>
+              <div class="social-links">
+                <a href="https://www.facebook.com/aptechlandhi" target="_blank"> <img src="img/svg/facebook1.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.instagram.com/aptechlearning_official/?hl=en" target="_blank"><img src="img/svg/wifi.svg" width="30px" class="push" alt=""></a>
+                <a href="https://twitter.com/aptechpakistan?lang=en" target="_blank"><img src="img/svg/twitter.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.youtube.com/channel/UC-1_9MriblcrShfSM_JMd5Q" target="_blank"><img src="img/svg/youtube.svg" width="30px" class="push" alt=""></a>
+                <a href="https://www.linkedin.com/school/aptech-computer-education-pakistan-operatons/" target="_blank"><img src="img/svg/linkedin.svg" width="30px" class="push" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <div class="text-center end">
+          copyright© 2020 By: CoVid-19
+        </div>
+      </footer>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery.min.js"></script>
+    <script src="js/data-tables/datatables.min.js"></script>
+    <script src="js/table-main.js"></script>
+</body>
+</html>
